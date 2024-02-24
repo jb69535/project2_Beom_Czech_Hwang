@@ -3,13 +3,13 @@
 package uga.edu.project2_Beom_Czech_Hwang.model;
 
 // DepartmentRatio.java (a new class to hold your query results)
-public class DepartmentRatio {
+public class Query1 {
 
     private String deptName;
     private Double ratio;
 
     // Constructor, getters, and setters
-    public DepartmentRatio(String deptName, Double ratio) {
+    public Query1(String deptName, Double ratio) {
         this.deptName = deptName;
         this.ratio = ratio;
     }

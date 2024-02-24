@@ -1,3 +1,5 @@
+-- problem2.sql
+
 SELECT 
   CONCAT(e.first_name, ' ', e.last_name) AS full_name,
   d.dept_name,

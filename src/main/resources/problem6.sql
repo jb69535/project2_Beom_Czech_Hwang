@@ -1,3 +1,4 @@
+-- problem6.sql
 -- from get_input_from_name_p6, get two input for @Emp1, @Emp2
 
 SET @Emp1 = 13141;

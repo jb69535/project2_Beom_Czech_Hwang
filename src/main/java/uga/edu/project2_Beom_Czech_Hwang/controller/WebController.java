@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import uga.edu.project2_Beom_Czech_Hwang.model.DepartmentRatio;
+import uga.edu.project2_Beom_Czech_Hwang.model.Query1;
+import uga.edu.project2_Beom_Czech_Hwang.model.Query2;
+import uga.edu.project2_Beom_Czech_Hwang.model.Query3;
 import uga.edu.project2_Beom_Czech_Hwang.service.EmployeeService;
 
 @Controller
@@ -37,11 +39,35 @@ public class WebController {
     @GetMapping("/query1")
     public ResponseEntity<?> getQuery1Results() {
         try {
-            List<DepartmentRatio> results = employeeService.getQuery1Results();
+            List<Query1> results = employeeService.getQuery1Results();
             return ResponseEntity.ok(results);
         } catch (IOException e) {
             // Log the exception, and return an appropriate response, such as an error
             // message or status code
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("An error occurred while processing the request.");
+        }
+    }
+
+    @GetMapping("/query2")
+    public ResponseEntity<?> getQuery2Results() {
+        try {
+            List<Query2> results = employeeService.getQuery2Results();
+            return ResponseEntity.ok(results);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("An error occurred while processing the request.");
+        }
+    }
+
+    @GetMapping("/query3")
+    public ResponseEntity<?> getQuery3Results() {
+        try {
+            List<Query3> results = employeeService.getQuery3Results();
+            return ResponseEntity.ok(results);
+        } catch (IOException e) {
             e.printStackTrace();
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body("An error occurred while processing the request.");

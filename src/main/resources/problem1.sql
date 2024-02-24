@@ -1,3 +1,5 @@
+-- problem1.sql
+
 SELECT departments.dept_name, 
        (SUM(IF(employees.gender = 'F', salaries.salary, 0)) / COUNT(IF(employees.gender = 'F', 1, NULL))) / 
        (SUM(IF(employees.gender = 'M', salaries.salary, 0)) / COUNT(IF(employees.gender = 'M', 1, NULL))) AS ratio
