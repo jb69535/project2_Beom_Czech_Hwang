@@ -1,26 +1,58 @@
 // Query 1 to 4
 document.addEventListener('DOMContentLoaded', (event) => {
-    // Attach click event listeners to each button
-    ['Query1', 'Query2', 'Query3', 'Query4'].forEach((id) => {
-      document.getElementById(id).addEventListener('click', function() {
-        fetch(`/dynamic/${id.toLowerCase()}`) // Your endpoint for the query
-          .then(response => response.json())
-          .then(data => {
-            const container = document.getElementById("sql-container");
-            container.innerHTML = ''; // Clear previous results
-            // Assuming 'data' is an array of objects
-            data.forEach(row => {
-              const div = document.createElement("div");
-              // Customize this line based on how your data needs to be displayed
-              div.textContent = JSON.stringify(row); 
-              container.appendChild(div);
+  ['Query1', 'Query2', 'Query3', 'Query4'].forEach((id) => {
+    document.getElementById(id).addEventListener("click", function() {
+      document.getElementById('spinner').style.display = 'block'; // Show spinner
+      fetch(`/dynamic/${id.toLowerCase()}`)
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('spinner').style.display = 'none'; // Hide spinner
+          const container = document.getElementById("sql-container");
+          container.innerHTML = ''; // Clear previous results
+
+          // Create a table
+          const table = document.createElement('table');
+          container.appendChild(table);
+
+          // Add table head
+          const thead = document.createElement('thead');
+          table.appendChild(thead);
+
+          // Assuming the data is an array of objects, use the keys of the first object for the table headers
+          const headerRow = document.createElement('tr');
+          thead.appendChild(headerRow);
+          if (data.length > 0) {
+            Object.keys(data[0]).forEach(key => {
+              const th = document.createElement('th');
+              th.textContent = key;
+              headerRow.appendChild(th);
             });
-          })
-          .catch(error => console.error('Error:', error));
-      });
+          }
+
+          // Add table body
+          const tbody = document.createElement('tbody');
+          table.appendChild(tbody);
+
+          // Add rows to table body
+          data.forEach(row => {
+            const tr = document.createElement('tr');
+            tbody.appendChild(tr);
+            Object.values(row).forEach(value => {
+              const td = document.createElement('td');
+              td.textContent = value;
+              tr.appendChild(td);
+            });
+          });
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          document.getElementById('spinner').style.display = 'none'; // Hide spinner
+        });
     });
-  });  
+  });
+});
 // Query 1 to 4 end
+
 // Query 5
 /*
 document.getElementById("Query5").addEventListener("click", function() {
@@ -62,3 +94,5 @@ document.getElementById("Query5").addEventListener("click", function() {
   });
   // Query 6 end
   */
+
+  
