@@ -1,25 +1,32 @@
+<!-- MysqlContainer.mustache -->
+
 <head>
 <link rel="stylesheet" href="/css/MysqlContainer.css">
-</head>
-<script>
-document.getElementById("button1").addEventListener("click", function() {
-  fetch('/dynamic/home')
-    .then(response => response.json())
-    .then(data => {
-      // Process and display your data here
-      console.log(data); // For demonstration
-    })
-    .catch(error => console.error('Error:', error));
-});
+<script src="/javascript/queryHandlers.js">
 </script>
+</head>
 <div id="button-container">
     <!-- Example buttons -->
-    <button type="button" id = "button1">Button 1</button>
-    <button type="button" id = "button2">Button 2</button>
-    <button type="button" id = "button2">Button 3</button>
-    <button type="button" id = "button2">Button 4</button>
-    <button type="button" id = "button2">Button 5</button>
-    <button type="button" id = "button2">Button 6</button>
+    <div classname="queries1-4">
+      <button type="button" id = "Query1">Query 1</button>
+      <button type="button" id = "Query2">Query 2</button>
+      <button type="button" id = "Query3">Query 3</button>
+      <button type="button" id = "Query4">Query 4</button>
+    </div>
+    <div classname="query5">
+        <!-- Inputs for Query 5 -->
+        <input type="text" id="Query5EmployeeID" placeholder="Employee 1 ID for Query 5">
+        <input type="text" id="Query5EmployeeName" placeholder="Employee 2 ID for Query 5">
+        <button type="button" id="Query5">Query 5</button>
+    </div>
+    <div classname="query6"></div>
+        <!-- Inputs for Query 6 -->
+        <input type="text" id="Query6EmployeeID" placeholder="Employee 1 ID for Query 6">
+        <input type="text" id="Query6EmployeeName" placeholder="Employee 2 ID for Query 6">
+        <button type="button" id="Query6">Query 6</button>
+    </div>
 </div>
+
+
 <div id="sql-container">
 <div>
