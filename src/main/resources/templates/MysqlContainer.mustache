@@ -1,0 +1,25 @@
+<head>
+<link rel="stylesheet" href="/css/MysqlContainer.css">
+</head>
+<script>
+document.getElementById("button1").addEventListener("click", function() {
+  fetch('/dynamic/home')
+    .then(response => response.json())
+    .then(data => {
+      // Process and display your data here
+      console.log(data); // For demonstration
+    })
+    .catch(error => console.error('Error:', error));
+});
+</script>
+<div id="button-container">
+    <!-- Example buttons -->
+    <button type="button" id = "button1">Button 1</button>
+    <button type="button" id = "button2">Button 2</button>
+    <button type="button" id = "button2">Button 3</button>
+    <button type="button" id = "button2">Button 4</button>
+    <button type="button" id = "button2">Button 5</button>
+    <button type="button" id = "button2">Button 6</button>
+</div>
+<div id="sql-container">
+<div>

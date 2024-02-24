@@ -1,24 +1,18 @@
 package uga.edu.project2_Beom_Czech_Hwang.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import uga.edu.project2_Beom_Czech_Hwang.service.EmployeeService;
+import org.springframework.web.servlet.ModelAndView;
 
-import java.util.List;
-
-@RestController
-@RequestMapping("/api")
+@Controller
+@RequestMapping("dynamic")
 public class WebController {
 
-    @Autowired
-    private EmployeeService employeeService;
-
-    @GetMapping("/maxGenderSalaryRatio")
-    public List<String> maxGenderSalaryRatio() {
-        return employeeService.getDepartmentsWithMaxGenderSalaryRatio();
+    @GetMapping("/home")
+    public ModelAndView homePage() {
+        ModelAndView mv = new ModelAndView("Home");
+        mv.addObject("message", "Welcome to our application!");
+        return mv;
     }
-
-    // Define other endpoints for different queries
 }
