@@ -2,8 +2,8 @@
 
 ## * Group:
 
-💻Jun Beom(All Java files, Frontend(Mustache, Javascript, css)),
-💻Brandon Czech(Query 4, 5),
+💻Jun Beom(All Java files, Frontend(Mustache, Javascript, css)), </br>
+💻Brandon Czech(Query 4, 5),</br>
 💻 Wonjoon Hwang(Query 1, 2, 3, 6)
 
 ## * How to Compile, Run, Clean:
