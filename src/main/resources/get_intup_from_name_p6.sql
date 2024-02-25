@@ -1,7 +1,8 @@
 -- get intup from typing to problem 6
 -- return emp_no
 
-SET @Ename = 'Georgi Facello'; -- emp_no: 13141:
+SET @Ename = 'Georgi Facello';
+-- '13141', 'Guther Holburn', 'd004', '10529', 'Ymte Yetto', 'd005', '13111', 'Anwar Krybus'
 
 SELECT concat(E1.first_name, " ",E1.last_name) as full_name
 		, emp_no 
