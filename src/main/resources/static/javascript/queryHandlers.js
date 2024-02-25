@@ -1,6 +1,19 @@
 // queryHandlers.js
 
+/**
+ * Handles the initialization of event listeners for query buttons and dynamic content updates.
+ * It listens for the DOMContentLoaded event to ensure the DOM is fully loaded before attaching
+ * event listeners to elements. Supports fetching and displaying results for queries 1 to 4, and
+ * specifically handles POST requests for queries 5 and 6 with input form data.
+ */
+
 // Query 1 to 4
+
+/**
+ * Attaches click event listeners to query buttons (Query1, Query2, Query3, Query4).
+ * On button click, fetches query results and dynamically updates the content inside
+ * the "sql-container" element with a generated table of results.
+ */
 document.addEventListener("DOMContentLoaded", (event) => {
   ["Query1", "Query2", "Query3", "Query4"].forEach((id) => {
     document.getElementById(id).addEventListener("click", function () {
@@ -56,6 +69,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
 // Query 1 to 4 end
 
 // Query 5
+
+/**
+ * Specifically handles the click event for the "Query5" button, including reading
+ * input values, making a POST request with those values, and displaying the results.
+ */
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("Query5").addEventListener("click", function () {
     let fullName1 = document.getElementById("Query5EmployeeName1").value.split(" ");
@@ -134,6 +152,11 @@ document.addEventListener("DOMContentLoaded", () => {
 // Query 5 end
 
 // Query 6
+
+/**
+ * Handles the "Query6" button click event in a similar manner to "Query5", by
+ * making a POST request with form inputs and displaying fetched results.
+ */
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("Query6").addEventListener("click", function () {
     let fullName1 = document.getElementById("Query6EmployeeName1").value.split(" ");
