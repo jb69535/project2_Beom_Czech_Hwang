@@ -9,6 +9,9 @@ body {
 }
 
 #button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   background-color: #e4decd; /* Tan Blonde */
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -19,19 +22,31 @@ body {
   justify-content: center;
 }
 
+.queries1-4 {
+  margin-bottom: 10px;
+}
+
+.queries1-4:last-child {
+  margin-bottom: 0;
+}
+
 button {
-  background-color: #c2b490; /* Blondey */
+  background-color: #c2b490; 
   color: #333; /* Dark text for contrast */
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
   margin: 10px;
-  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
+button:last-child, .queries1-4:last-child input[type="text"] {
+  margin-right: 0;
+}
+
 button:hover {
-  background-color: #a8997f; /* A darker shade for hover, derived from Blondey */
+  background-color: #a8997f; 
+  cursor: pointer;
 }
 
 .loader {
