@@ -6,6 +6,9 @@
 💻Brandon Czech(Query 4, 5),</br>
 💻 Wonjoon Hwang(Query 1, 2, 3, 6)
 
+## EXAMPLE EMPLOYEES NAMES:
+'13141', 'Guther Holburn', '10529', 'Ymte Yetto', '13111', 'Anwar Krybus'
+
 ## * How to Compile, Run, Clean:
 
 ### Before running the code,
