@@ -2,14 +2,10 @@
 
 ## * Group:
 
-💻Jun Beom(All Java files, Springboot, Frontend(Mustache, Javascript, css), javadoc), </br>
-💻Brandon Czech(Query 4, 5),</br>
+💻 Jun Beom(All Java files, Springboot, Frontend(Mustache, Javascript, css), javadoc), </br>
+💻 Brandon Czech(Query 4, 5),</br>
 💻 Wonjoon Hwang(Query 1, 2, 3, 6)
 
-## EXAMPLE EMPLOYEES NAMES:
-
-'13141', 'Guther Holburn', '10529', 'Ymte Yetto', '13111', 'Anwar Krybus' </br>
-Sumant Peac, Bartek Lieblein
 
 ## * How to Compile, Run, Clean:
 
@@ -48,3 +44,12 @@ http://localhost:8080/dynamic/home
 : cd project2_Beom_Czech_Hwang </br>
 
 open target/site/apidocs/index.html
+
+## * Examples
+
+### EXAMPLE EMPLOYEES NAMES:
+
+Sumant Peac, Bartek Lieblein (Query5) </br>
+'13141', 'Guther Holburn', '13111', 'Anwar Krybus' (Query6)
+
+
