@@ -2,13 +2,13 @@
 
 ## * Group:
 
-💻Jun Beom(All Java files, Springboot, Frontend(Mustache, Javascript, css), javadoc), `</br>`
-💻Brandon Czech(Query 4, 5),`</br>`
+💻Jun Beom(All Java files, Springboot, Frontend(Mustache, Javascript, css), javadoc), </br>
+💻Brandon Czech(Query 4, 5),</br>
 💻 Wonjoon Hwang(Query 1, 2, 3, 6)
 
 ## EXAMPLE EMPLOYEES NAMES:
 
-'13141', 'Guther Holburn', '10529', 'Ymte Yetto', '13111', 'Anwar Krybus'
+'13141', 'Guther Holburn', '10529', 'Ymte Yetto', '13111', 'Anwar Krybus' </br>
 Sumant Peac, Bartek Lieblein
 
 ## * How to Compile, Run, Clean:
@@ -25,17 +25,17 @@ Make sure that you are in the right directory.
 
 ### Run the application
 
-: mvn spring-boot:run `</br>`
+: mvn spring-boot:run </br>
 
-open web and search: `</br>`
+open web and search: </br>
 
 http://localhost:8080/dynamic/home
 
 ### For people who do not have mvn (Using .jar file)
 
-: java -jar target/project2_Beom_Czech_Hwang-0.0.1-SNAPSHOT.jar `</br>`
+: java -jar target/project2_Beom_Czech_Hwang-0.0.1-SNAPSHOT.jar </br>
 
-open web and search: `</br>`
+open web and search: </br>
 
 http://localhost:8080/dynamic/home
 
@@ -45,6 +45,6 @@ http://localhost:8080/dynamic/home
 
 ### To read the javadoc
 
-: cd project2_Beom_Czech_Hwang
+: cd project2_Beom_Czech_Hwang </br>
 
 open target/site/apidocs/index.html
